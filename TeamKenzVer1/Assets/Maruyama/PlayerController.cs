@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
                 // 実際のチャージ時間と最大チャージ時間を0～1で返す
                 float chargeGage = Mathf.Clamp01(chargeTime / maxChargeTime);
                 // 上記を用いて角度を調整（ここでは20～70）
-                float radValue = Mathf.Lerp(20f, 70f, chargeGage);
+                float radValue = Mathf.Lerp(25f, 70f, chargeGage);
                 // 度数法（Rad）として変換
                 float rad = radValue * Mathf.Deg2Rad;
                 // ジャンプの大きさも同様に調整
