@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     private Vector3 _pos;
     private Vector3 _cameraPos;
     private const int CAMERA_POS_Z = -10;
-    public float _cameraDistansToPlayer;
+    public float _cameraDistanceToPlayer;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        _cameraPos.y = _target.transform.position.y + _cameraDistansToPlayer;
+        _cameraPos.y = _target.transform.position.y + _cameraDistanceToPlayer;
         _cameraPos.z = CAMERA_POS_Z;
         Camera.main.gameObject.transform.position = _cameraPos;
     }
