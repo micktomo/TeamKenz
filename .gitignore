@@ -4,5 +4,11 @@ Temp
 UserSettings
 .vscode
 /[Aa]ssets/AssetStoreTools*
+/Assets/AssetStoreTools/
+/assets/AssetStoreTools/
 .vs/
 obj
+.vsconfig
+*.csproj
+TeamKenzVer1/Assets/AssetStoreTools/bird_fukurou_run.png
+TeamKenzVer1/Assets/AssetStoreTools/bird_fukurou_run.png.meta
