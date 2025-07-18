@@ -3,14 +3,14 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _score;
+    [SerializeField] TextMeshProUGUI _scoreText;
     [SerializeField] Transform _player;
     float _startPos;
+    float _highScore = 0f;
     void Start()
     {
         if (_player == null)
         {
-            Debug.Log("プレーヤーがアサインされていません。");
             return;
         }
         _startPos = _player.position.y;
@@ -18,7 +18,12 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        float score = _player.position.y - _startPos;
-        _score.text = Mathf.FloorToInt(score).ToString();
+        float currentScore = _player.position.y - _startPos;
+        if (currentScore > _highScore)
+        {
+            _highScore = currentScore;
+        }
+        int scoreInt = Mathf.FloorToInt(_highScore);
+        _scoreText.text = $"Score: {scoreInt}m";
     }
 }
