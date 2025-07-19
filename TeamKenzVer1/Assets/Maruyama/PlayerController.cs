@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     float _chargeTime = 0f;
     bool _isGrounded = false;
     bool _isFacingRight = true;
+    [SerializeField] float _playerScaleX = 0.5f;
+    [SerializeField] float _playerScaleY = 0.5f;
+    [SerializeField] float _playerScaleZ = 0.5f;
 
     void Start()
     {
@@ -27,13 +30,13 @@ public class PlayerController : MonoBehaviour
             if (moveInput > 0)
             {
                 _isFacingRight = true;
-                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                transform.localScale = new Vector3(_playerScaleX, _playerScaleY, _playerScaleZ);
                 transform.position += new Vector3(_deltaMove * Time.deltaTime, 0, 0);
             }
             else if (moveInput < 0)
             {
                 _isFacingRight = false;
-                transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
+                transform.localScale = new Vector3(-1 * _playerScaleX, _playerScaleY, _playerScaleZ);
                 transform.position -= new Vector3(_deltaMove * Time.deltaTime, 0, 0);
             }
 
