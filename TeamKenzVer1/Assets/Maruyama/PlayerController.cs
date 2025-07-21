@@ -12,9 +12,9 @@ public class PlayerController : MonoBehaviour
     float _chargeTime = 0f;
     bool _isGrounded = false;
     bool _isFacingRight = true;
-    [SerializeField] float _playerScaleX = 0.5f;
-    [SerializeField] float _playerScaleY = 0.5f;
-    [SerializeField] float _playerScaleZ = 0.5f;
+    float _playerScaleX = 0.5f;
+    float _playerScaleY = 0.5f;
+    float _playerScaleZ = 0.5f;
 
     void Start()
     {
